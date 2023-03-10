@@ -23,19 +23,19 @@ main {
 }
 
 #cv-icon {
-  grid-area: 2 / 5;
+  grid-area: 2 / 5 / 2 / 5;
   justify-self: center;
   align-self: center;
 }
 
 #portfolio-icon {
-  grid-area: 3 / 5;
+  grid-area: 3 / 5 / 3 / 5;
   justify-self: center;
   align-self: center;
 }
 
 #contact-icon {
-  grid-area: 4 / 5;
+  grid-area: 4 / 5 / 4 / 5;
   justify-self: center;
   align-self: center;
 }
