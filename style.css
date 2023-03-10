@@ -17,9 +17,27 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
+}
+
+#cv-icon {
+  grid-area: 2 / 5;
+  justify-self: center;
+  align-self: center;
+}
+
+#portfolio-icon {
+  grid-area: 3 / 5;
+  justify-self: center;
+  align-self: center;
+}
+
+#contact-icon {
+  grid-area: 4 / 5;
+  justify-self: center;
+  align-self: center;
 }
 
 header {
