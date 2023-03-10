@@ -4,23 +4,22 @@ blue:030a8c
 yellow: ffffcf */
 
 body {
-  min-height: 100vh;
+  height: 100%;
   background-color: #008080;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
 }
 
 header {
   grid-area: 1 / 1 / 1 / 6;
-
+  display: flex;
   background-color: #030a8c;
   border-right: solid #c3c3c3 0.5px;
-  border-bottom: solid #c3c3c3 5px;
 
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,18 +27,27 @@ header {
   font-weight: lighter;
 }
 
+header :nth-child(1) {
+  align-content: center;
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
 .section-wrapper {
-  grid-area: 2 / 2 / 4 / 3;
+  grid-area: 2 / 2 / 5 / 4;
   display: grid;
   grid-template-columns: 0.2fr 2.5fr 0.2fr 0.5fr 0.2fr;
-  grid-template-rows: 0.2fr 0.1fr 2.5fr 0.1fr 0.5fr;
+  grid-template-rows: 0.2fr 0.5fr 2.5fr 0.5fr;
   grid-auto-flow: column;
-  padding-bottom: 10px;
   background-color: #c3c3c3;
   border-top: solid white 1px;
   border-left: solid white 1px;
   border-right: solid black 1px;
   border-bottom: solid black 1px;
+
+  max-width: 500px;
+  min-width: 300px;
 }
 
 #left-column {
@@ -47,19 +55,39 @@ header {
   background-color: #ffffcf;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+
+  border-top: solid black 1px;
+  border-left: solid black 1px;
+  border-right: solid white 1px;
+  border-bottom: solid white 1px;
+}
+
+#left-column :nth-child(1) {
+  padding: 10px;
+}
+
+#left-column :nth-child(2) {
+  padding: 10px;
 }
 
 #right-column {
-  grid-area: 4 / 4;
+  grid-area: 3 / 4;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
-  margin-top: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: #c3c3c3;
+  border-top: solid white 1px;
 }
 
 .button {
@@ -68,16 +96,21 @@ footer {
   border-left: solid white 1px;
   border-right: solid black 1px;
   border-bottom: solid black 1px;
+
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #start-button {
-  margin: 5px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-bottom: 5px;
 }
 
 #desktop-clock {
-  margin: 5px;
-  margin-right: 8px;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-bottom: 5px;
+
   border-top: solid black 1px;
   border-left: solid black 1px;
   border-right: solid white 1px;
