@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "W95";
+  src: url(/assets/W95FA/w95fa.woff2) format("woff2"),
+    url(/assets/W95FA/w95fa.woff) format("woff");
+}
+
 /* :root 
-grey: c3c3c3
-blue:030a8c
-yellow: ffffcf */
+--grey: c3c3c3
+--teal: 008080
+--blue:030a8c
+--yellow: ffffcf */
 
 body {
   height: 100%;
@@ -22,16 +29,16 @@ header {
   border-right: solid #c3c3c3 0.5px;
 
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 9px;
+  font-family: "W95";
+  font-size: 12px;
   font-weight: lighter;
 }
 
 header :nth-child(1) {
   align-content: center;
   margin: 0;
-  padding-top: 2px;
-  padding-left: 2px;
+  padding-top: 4px;
+  padding-left: 4px;
 }
 
 .section-wrapper {
@@ -97,7 +104,7 @@ footer {
   border-right: solid black 1px;
   border-bottom: solid black 1px;
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "W95";
 }
 
 #start-button {
@@ -116,5 +123,5 @@ footer {
   border-right: solid white 1px;
   border-bottom: solid white 1px;
 
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "W95";
 }
