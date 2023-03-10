@@ -1,0 +1,70 @@
+/* :root 
+grey: c3c3c3
+blue:030a8c
+yellow: ffffcf */
+
+body {
+  min-height: 100vh;
+  background-color: #008080;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.2fr 2.5fr 0.2fr 0.5fr 0.2fr;
+  grid-template-rows: 0.2fr 0.1fr 2.5fr 0.1fr 0.5fr;
+  grid-auto-flow: column;
+}
+
+.section-wrapper {
+  grid-area: 3 / 2 / 3 / 2;
+  display: grid;
+  grid-template-columns: 0.2fr 2.5fr 0.2fr 0.5fr 0.2fr;
+  grid-template-rows: 0.2fr 0.1fr 2.5fr 0.1fr 0.5fr;
+  grid-auto-flow: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #c3c3c3;
+  border-top: solid white 3px;
+  border-left: solid white 3px;
+  border-right: solid darkgray 3px;
+  border-bottom: solid darkgray 3px;
+}
+
+#left-column {
+  grid-area: 3 / 2;
+  background-color: #ffffcf;
+  display: flex;
+  flex-direction: row;
+}
+
+#right-column {
+  grid-area: 4 / 4;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  background-color: #c3c3c3;
+}
+
+.button {
+  background-color: #c3c3c3;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#start-button {
+  margin: 5px;
+}
+
+#desktop-clock {
+  margin: 5px;
+  border-top: solid darkgray 2px;
+  border-left: solid darkgray 2px;
+  border-right: solid white 2px;
+  border-bottom: solid white 2px;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
