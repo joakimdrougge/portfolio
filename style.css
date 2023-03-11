@@ -1,7 +1,7 @@
 @font-face {
   font-family: "W95";
-  src: url(/assets/W95FA/w95fa.woff2) format("woff2"),
-    url(/assets/W95FA/w95fa.woff) format("woff");
+  src: url(assets/W95FA/w95fa.woff2) format("woff2"),
+    url(assets/W95FA/w95fa.woff) format("woff");
 }
 
 /* :root 
