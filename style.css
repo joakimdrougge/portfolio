@@ -125,6 +125,19 @@ footer {
   font-family: "W95";
 }
 
+.button:hover {
+  background-color: #030a8c;
+  color: white;
+}
+
+.button:active {
+  border-top: solid black 1px;
+  border-left: solid black 1px;
+  border-right: solid white 1px;
+  border-bottom: solid white 1px;
+
+}
+
 #start-button {
   margin-top: 5px;
   margin-left: 15px;
