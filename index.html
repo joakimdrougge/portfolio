@@ -8,57 +8,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Section template -->
 
-    <!-- <template class="section-template"> -->
-    <main>
-      <div class="section-wrapper">
-        <header id="section-header">
-          <p>Welcome</p>
-        </header>
-        <div id="left-column">
-          <p id="about-section">
-            Lorem ipsum dolor sit amet, <br />
-            consectetur adipiscing elit,<br />
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            <br />
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <img
-            src=""
+   <header class="grid">
+
+  
+      <div class="menu-bar">
+        <button id="start-button" class="button">Start</button>
+     
+        <div id="desktop-clock">desktop clock</div>
+      </div>  
+      
+
+   </header>
+
+    <main class="grid">
+
+      <div id="modal" class="section-container grid"> 
+
+          <div id="section-header">  
+            <div id="header-text">Welcome</div>
+            <button id="x-button" class="button">&times;</button>  
+          </div>
+      
+      
+          <div id="left-column">
+
+            <img
+            src="/assets/pp/Joakim-Natvig-Drougge-PFP.JPG"
             alt="profile picture"
-            width=""
-            height=""
-            id="profile-picture"
-          />
-        </div>
-        <div id="right-column">
-          <button type="button"  class="button" onclick="alert('Im a button!')">Button</button>
-          <button type="button" class="button">Button</button>
-          <button type="button" class="button">Button</button>
-          <button type="button" class="button">Close</button>
-        </div>
-      </div>
+            width="80px"
+            height="100px"
+            id="profile-picture"/>
+           
+            <p id="welcome-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+            
+            </p>
+                
+          </div>
 
-      <img src="" alt="cv-icon" width="" height="" id="cv-icon" />
-      <img src="" alt="portfolio-icon" width="" height="" id="portfolio-icon" />
-      <img src="" alt="contact-icon" width="" height="" id="contact-icon" />
+          <div id="right-column">
+
+            <button  class="button" onclick="alert('Im a button!')">Button</button>
+            <button  class="button">Button</button>
+            <button  class="button">Button</button>
+            <button  class="button"><span style="text-decoration: underline">C</span>lose</button>
+
+          </div>
+  
+      </div> 
+
+    <div id="about-icon" class="desktop-icon">
+      <img src="" alt="about-icon" width="" height="" />
+      <p>About</p>
+    </div>
+
+    <div id="portfolio-icon" class="desktop-icon">
+      <img src="" alt="portfolio-icon" width="" height=""/>
+      <p>Portfolio</p>
+    </div>
+
+    <div id="contact-icon" class="desktop-icon">
+      <img src="" alt="contact-icon" width="" height="" />
+      <p>Contact</p>
+    </div>
+
     </main>
 
-    <!-- </template> -->
+    <!-- <footer> </footer> -->
 
-    <!-- Footer -->
+    
 
-    <footer>
-      <div class="footer-content-wrapper">
-        <button id="start-button" class="button">Start</button>
-      </div>
-      <div class="footer-content-wrapper">
-        <div id="desktop-clock">desktop clock</div>
-      </div>
-    </footer>
 
-    <script src="script.js"></script>
+
+    <script src="modal-desktop-window.js"></script>
+
     <script src="desktop-clock.js"></script>
   </body>
 </html>
