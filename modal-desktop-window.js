@@ -1,6 +1,6 @@
 var modal = document.getElementById("modal");
 
-var btn = document.getElementById("about-icon");
+var btn = document.getElementById("portfolio-icon");
 
 var xButton = document.getElementById("x-button");
 var closeButton = document.getElementById("close-button");
