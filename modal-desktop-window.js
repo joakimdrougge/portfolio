@@ -27,10 +27,6 @@ var portfolioBtn = document.getElementById("portfolio-icon");
 
 var xButton = document.getElementById("window-x-button");
 
-var headerText = document.getElementById("window-header-text");
-
-headerText.innerHTML = "FIX THIS";
-
 binBtn.ondblclick = function () {
     windowModal.style.display = "grid";
 }
