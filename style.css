@@ -21,14 +21,15 @@ body {
 
   font-family: "W95";
   font-size: 16px;
-
-  min-width: 350px;
-  
+  margin: auto;
+  min-width: 300px;
 }
 
 main { 
   margin: auto;
   padding: 10px;
+  
+  min-width: 500px;
 }
 
 .grid {
@@ -37,7 +38,7 @@ main {
   gap: 30px;
 }
 
-
+/* Menu bar */
 
 header {
   padding: 5px 10px;
@@ -45,13 +46,13 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .menu-bar {
   grid-column: 1 / span 12;
   display: flex;
-  flex-direction: row; /* DEFAULT */
+  flex-direction: row; 
   align-items: center;
   justify-content: space-between;
 }
@@ -72,23 +73,51 @@ header {
 
 /* Logo */
 
-#logo {
+#logo-container {
   grid-column: 4 / span 6;
   grid-row: 2 / span 2;
+
+  display: flex;
+  flex-direction: column;
   justify-self: center;
   align-self: center;
 
+  align-items: center;
+
   transform: scale(2.0);
+
+  cursor: help /* test for show/hide */
 }
 
+#logo-text {
+  display: none;
 
-/* Desktop Icons */
+  font-size: 6px;
+  color: white;
+
+  margin-top: 6em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+
+  padding: 5px;
+  position: fixed;
+}
+
+/* Desktop & window icons */
 
 .desktop-icon {
   display: flex;
+
   flex-direction: column;
   align-items: center;
+  
+  margin-left: 2em;
+
+  max-width: 64px;
+  
   cursor: pointer;
+  
 }
 
 .desktop-icon-text {
@@ -96,45 +125,98 @@ header {
   color: white;
 }
 
-#about-icon {
-  grid-column: 1 / span 2;
-  justify-self: flex-start;
+.window-icon {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: auto;
+
+  max-width: 64px;
+  
+  cursor: pointer;
+}
+
+.window-icon-text {
+  margin: 0px;
+  color: black;
 }
 
 #portfolio-icon {
-  grid-column: 1 / span 2;
-  justify-self: flex-start;
-  margin: 2px;
+  grid-column: 1 / span 1;
+}
+
+#about-icon {
+  grid-column: 1 / span 1;
 }
 
 #contact-icon {
-  grid-column: 1 / span 2;
-  justify-self: flex-start;
-  margin: 2px;
-}
-
-#cv-icon {
-  grid-column: 1 / span 2;
-  justify-self: flex-start;
-  margin: 2px;
+  grid-column: 1 / span 1;
 }
 
 #bin-icon {
   grid-column: 12 / span 1;
   grid-row: 8 /span 1;
+  margin-right: 2em;
+  
 }
 
-/* .icon-images {
-  transform: scale(1.5);
-} */
-
-#resume-pdf {
-  justify-self: center;
-  align-self: center;
-  z-index: 2;
+#resume-icon {
+  grid-column: 1 / span 1;
 }
 
-/* Desktop window */
+#resume-container {
+ display: none;
+
+ justify-self: center;
+ align-self: center;
+
+ z-index: 1;
+
+ position: fixed;
+
+ margin-top: 2em;
+ 
+}
+
+#poster-container {
+ display: none;
+
+ align-self: center;
+
+ z-index: 2;
+
+ position: fixed;
+ right: 50px;
+
+ margin-top: 2em;
+}
+
+#video-container {
+  display: none;
+ 
+  justify-content: center;
+ 
+  position: fixed;
+  bottom: 5em;
+  right: 200px;
+
+  z-index: 1;
+ }
+
+ #dotd-video {
+  border-top: solid black 2px;
+  border-left: solid black 2px;
+  border-right: solid black 2px;
+  border-bottom: solid black 2px;
+ }
+
+
+
+/* Desktop window & pop-ups */
 
 .section-container {
   display: none;
@@ -152,16 +234,13 @@ header {
   border-right: solid black 2px;
   border-bottom: solid black 2px;
 
-  margin: auto;
-  margin-top: 2em;
-
   width: 32em;
 
   z-index: 1;
   position: fixed;
   }
 
-#section-header {
+.section-header {
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
@@ -174,11 +253,54 @@ header {
   width: 100%;
 }
 
+.window-content-container {
+  grid-column: 1 / span 12;
+
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+
+  margin-top: 1em;
+  margin-left: 0.2em;
+  margin-bottom: 1em;
+  margin-right: 0.2em;
+
+  padding: 10px 10px;
+
+  background-color: beige;
+
+  min-height: 350px;
+
+  border-top: solid black 2px;
+  border-left: solid black 2px;
+  border-right: solid white 2px;
+  border-bottom: solid white 2px;
+
+  overflow-x: hidden;
+}
+
+#video-window-container {
+  grid-column: 1 / span 12;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-top: 2em;
+  margin-left: 0.2em;
+  margin-bottom: 2em;
+  margin-right: 0.2em;
+
+  overflow-x: hidden;
+}
+
+/* About window */
+
 #left-column {
   grid-column: 1 / span 8;
 
   display: flex;
-  flex-direction: column; /* DEFAULT */
+  flex-direction: row; /* DEFAULT */
   justify-items: center;
 
   margin-top: 15px;
@@ -188,6 +310,8 @@ header {
   padding: 10px 10px;
 
   background-color: beige;
+
+  min-height: 350px;
 
   border-top: solid #929292 2px;
   border-left: solid #929292 2px;
@@ -217,22 +341,23 @@ header {
   margin-top: auto;
 }
 
-#header-text {
+#about-header-text,
+#window-header-text {
   height: 1em;
   width: 1em;
+  white-space: nowrap;
 }
 
 #welcome-text {
   background-color: beige;
   padding: 10px;
-}
-
-#profile-picture {
-  background-color: azure;
-  padding: 10px;
   margin: 10px;
 }
 
+#profile-picture {
+  border: 10px white solid;
+  margin: 50px 10px 10px 10px;
+}
 
 /* Button styling */
 
@@ -274,7 +399,9 @@ header {
   outline: 0;
 }
 
-#x-button {
+#about-x-button,
+#window-x-button,
+#video-x-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,19 +418,25 @@ header {
   margin: 2px;
 } 
 
-#x-button:focus {
+#about-x-button:focus, 
+#window-x-button:focus,
+#video-x-button:focus {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
 }
 
-#x-button:hover {
+#about-x-button:hover,
+#window-x-button:hover,
+#video-x-button:hover {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
 }
 
-#x-button:active {
+#about-x-button:active,
+#window-x-button:active,
+#video-x-button:active  {
   border-top: solid #929292 1px;
   border-left: solid #929292 1px;
   border-right: solid white 1px;
@@ -311,8 +444,6 @@ header {
 
   outline: 0;
 }
-
-
 
 /**
  * 1. Change the font styles in all browsers.

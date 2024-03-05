@@ -7,36 +7,72 @@
     <title>Joakim Natvig Drougge</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
 
-   <header class="grid">
+    <header class="grid">
 
-  
-      <div class="menu-bar">
-
-        
+      <div class="menu-bar">  
+              
         <button id="start-button" class="button">Start</button>
-        
      
         <div id="desktop-clock"></div>
+
       </div>  
-      
 
-   </header>
+    </header>
 
 
-   
     <main class="grid">
 
-      <div id="modal" class="section-container grid"> 
+      <!-- Desktop window modal -->
 
-          <div id="section-header">  
-            <div id="header-text">Welcome</div>
-            <button id="x-button" class="button">&times;</button>  
+      <div id="window-modal" class="section-container grid"> 
+
+        <div class="section-header">  
+          <div id="window-header-text"></div>
+          <button id="window-x-button" class="button">&times;</button>  
+        </div>
+    
+    
+        <div class="window-content-container">
+
+          <div id="poster-icon" class="window-icon">
+           <img src="assets/desktop-icons/image-icon.png" alt="icon" width="" height=""/>
+
+            <p class="window-icon-text">Lollapalooza-poster(2020).png</p>
+              
+          </div>
+
+          <div id="video-icon" class="window-icon">
+            <img src="assets/desktop-icons/video-icon.png" alt="icon" width="" height="" id=""/>
+ 
+             <p class="window-icon-text">DOTD - A story without words.mp4 </p>
+               
+           </div>
+
+
+        </div>
+      </div>
+
+      <!-- About modal -->
+      
+      <div id="about-modal" class="section-container grid"> 
+
+          <div class="section-header">  
+            <div id="about-header-text">About</div>
+            <button id="about-x-button" class="button">&times;</button>  
           </div>
       
       
           <div id="left-column">
+           
+            <p id="welcome-text">
+            Hi! <br><br>
+            My name is Joakim Natvig Drougge, I'm a digital & graphic designer with a passion for pixel art, football and videogames. <br><br>
+
+            Welcome to my portfolio site! <br>
+            </p>
 
             <img
             src="assets/pp/Joakim-Natvig-Drougge-PFP.JPG"
@@ -44,17 +80,6 @@
             width="80px"
             height="100px"
             id="profile-picture"/>
-           
-            <p id="welcome-text">
-            Hi! <br><br>
-            My name is Joakim Natvig Drougge, I'm a digital & graphic designer with a passion for pixel art, football and videogames. <br><br>
-
-            Welcome to my portfolio site! <br>
-            
-
-            
-            </p>
-                
           </div>
 
           <div id="right-column">
@@ -68,53 +93,78 @@
   
       </div> 
 
+    <!-- Stuff -->
 
-      <!-- <div id="resume-pdf">
-      <embed src="assets/cv/Joakim-Natvig-Drougge-CV-26:2-24.pdf" type="application/pdf" width="100%" height="100%" />
-    </div> -->
-
-      <div id="logo">
-        <img src="assets/desktop-icons/logo-v1.png" alt="logo" width="" heigh="" />
-        <p class="desktop-icon-text"></p>
+      <div id="resume-container">
+        <img src="assets/cv/resume.png" alt="" width="45%" height="" id="resume-image" />
       </div>
+
+      <div id="poster-container">
+        <img src="assets/images:videos/Lollapalooza-poster-2020.png" alt="" width="45%" height="" id="poster-image" />
+      </div>
+
+      <div id="video-container" class="section-container grid">
+        <div class="section-header">  
+          <div id="window-header-text">DOTD - A story without words.mp4</div>
+          <button id="video-x-button" class="button">&times;</button>  
+        </div>
+
+        <div id="video-window-container">
+        <video src="assets/images:videos/DOTD.mp4" width="90%" height="" controls id="dotd-video"> 
+          Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+      
+
+
+    <!-- Wallpaper Logo  -->
+
+      <div id="logo-container">
     
+        <img src="assets/desktop-icons/logo-v1.png" alt="färgglad-logo" width="" heigh="" id="logo-image" onclick="toggleText() "/>
+        
+        <p id="logo-text"> Färgglad - (Adj. Swedish) Colourful, vibrant</p>
+
+      </div>
+
+
+    <!-- Desktop icons -->
 
     <div id="portfolio-icon" class="desktop-icon">
-      <img src="assets/desktop-icons/laptop-icon.png" alt="portfolio-icon" width="" height="" class="icon-images"/>
-      <p class="desktop-icon-text">Portfolio</p>
+      <img src="assets/desktop-icons/laptop-icon.png" alt="portfolio-icon" width="" height=""/>
+      <p class="desktop-icon-text">Stuff</p>
     </div>
 
     <div id="about-icon" class="desktop-icon">
-      <img src="assets/desktop-icons/profile-picture.png" alt="about-icon" width="" height="" class="icon-images"/>
+      <img src="assets/desktop-icons/profile-picture.png" alt="about-icon" width="" height=""/>
       <p class="desktop-icon-text">About</p>
     </div>
 
-    <div id="cv-icon" class="desktop-icon">
-      <img src="assets/desktop-icons/resume-icon.png" alt="cv-icon" width="" height="" class="icon-images" />
-      <p class="desktop-icon-text">Resumé</p>
+    <div id="resume-icon" class="desktop-icon">
+      <img src="assets/desktop-icons/resume-icon.png" alt="resume-icon" width="" height=""/>
+      <p class="desktop-icon-text">Resumé.pdf</p>
     </div>
 
     <div id="contact-icon" class="desktop-icon">
-      <img src="assets/desktop-icons/envelope-icon.png" alt="contact-icon" width="" height="" class="icon-images"/>
+      <img src="assets/desktop-icons/envelope-icon.png" alt="contact-icon" width="" height=""/>
       <p class="desktop-icon-text">Contact</p>
     </div>
 
     <div id="bin-icon" class="desktop-icon">
-      <img src="assets/desktop-icons/trashcan.png" alt="bin-icon" width="" height=""/>
+      <img src="assets/desktop-icons/trashcan.png" alt="bin-icon" width="" height="" />
       <p class="desktop-icon-text">Bin</p>  
     </div>
 
 
     </main>
 
-    <!-- <footer> </footer> -->
-
-    
-
-
-
     <script src="modal-desktop-window.js"></script>
 
     <script src="desktop-clock.js"></script>
+
   </body>
+  
 </html>
