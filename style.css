@@ -36,9 +36,6 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
-
-  
-
 }
 
 /* Menu bar */
@@ -537,7 +534,10 @@ header {
   margin: 0.2em;
   }
 
-  
+  #bin-icon {
+    grid-column: 12 / span 1;
+    grid-row: 5 /span 1;
+  }  
 
 
 
