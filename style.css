@@ -526,7 +526,7 @@ header {
 @media only screen and (max-width: 480px) {
   body {
     background-color: lightgreen;
-    width: 100%;
+    width: 100vw;
 
     overflow-x: hidden;
   }
@@ -536,10 +536,24 @@ header {
   }
 
   #bin-icon {
-    grid-column: 12 / span 1;
-    grid-row: 6 /span 1;
+    grid-column: 10 / span 1;
   }
 
+  #logo-container {
+    grid-column: 3 / span 6;
+    grid-row: 2 / span 2;
+  
+    display: flex;
+    flex-direction: column;
+    
+    align-self: center;
+  
+    align-items: center;
+  
+    transform: scale(2.0);
+  
+    cursor: help;
+  }
 
 }
 
