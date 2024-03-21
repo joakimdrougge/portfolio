@@ -46,10 +46,12 @@ var resumeBtn = document.getElementById("resume-icon");
 var resumeImg = document.getElementById("resume-image");
 
 resumeBtn.ondblclick = function () {
-    resume.style.display = "block";
+    resume.style.display = "grid";
 }
 
-resumeImg.onclick = function () {
+var xButton = document.getElementById("resume-x-button");
+
+xButton.onclick = function () {
     resume.style.display = "none";
 }
 

@@ -16,6 +16,12 @@
               
         <button id="start-button" class="button">Start</button>
      
+        <div class ="dropup-menu">
+          <a href="*">Link 3</a>
+          <a href="*">Link 2</a>
+          <a href="*">Link 1</a>
+        </div>
+
         <div id="desktop-clock"></div>
 
       </div>  
@@ -93,8 +99,19 @@
 
     <!-- Stuff -->
 
-      <div id="resume-container">
-        <img src="assets/cv/resume.png" alt="" width="45%" height="" id="resume-image" />
+      <div id="resume-container" class="section-container">
+        <div class="section-header">
+          <div id="resume-header-text">Resumé</div>
+          <button id="resume-x-button" class="button">&times;</button>  
+        </div>
+
+        <!-- <img src="assets/cv/resume.png" alt="" width="45%" height="" id="resume-image" /> -->
+        <iframe src="assets/cv/Joakim-Natvig-Drougge-CV-26:2-24.pdf" 
+                width="400px"
+                height="500px"
+                title="resume-pdf"
+                id="resume-pdf"> 
+        </iframe> 
       </div>
 
       <div id="poster-container">
@@ -124,7 +141,7 @@
     
         <img src="assets/desktop-icons/logo-v1.png" alt="färgglad-logo" width="" heigh="" id="logo-image" onclick="toggleText() "/>
         
-        <p id="logo-text"> Färgglad - (Adj. Swedish) Colourful, vibrant</p>
+        <p id="logo-text"> Färgglad (Adj. Swedish) -  Colourful, vibrant</p>
 
       </div>
 
