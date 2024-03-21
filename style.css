@@ -28,8 +28,8 @@ body {
 main { 
   margin: auto;
   padding: 10px;
-  
-  min-width: 500px;
+
+  min-width: 375px;
 
   justify-items: center;
 }
@@ -535,14 +535,11 @@ header {
     overflow-x: hidden;
   }
 
-  main {
-    max-width: 100%;
-    overflow-x: hidden;
+  .desktop-icon {
+  margin: 0.2em;
   }
 
-.desktop-icon {
-  margin: 0.2em;
-}
+  
 
 
 
