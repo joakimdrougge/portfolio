@@ -28,7 +28,6 @@ body {
 
 main { 
   margin: auto;
-  padding: 10px;
 
   justify-items: center;
 }
@@ -539,6 +538,8 @@ header {
     grid-column: 12 / span 1;
     grid-row: 5 /span 1;
   }  
+
+  
 
 
 
