@@ -22,7 +22,7 @@ body {
   font-family: "W95";
   font-size: 16px;
   margin: auto;
-  min-width: 300px;
+  max-width: 100%;
 }
 
 main { 
@@ -36,6 +36,9 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
+
+  justify-items: center;
+
 }
 
 /* Menu bar */
@@ -47,6 +50,8 @@ header {
   bottom: 0;
   width: 100%;
   z-index: 3;
+
+  max-width: 100%;
 }
 
 .menu-bar {
@@ -111,10 +116,6 @@ header {
 
   flex-direction: column;
   align-items: center;
-  
-  margin-left: 2em;
-  margin-right: 2em;
-
   max-width: 64px;
   
   cursor: pointer;
@@ -148,25 +149,27 @@ header {
 
 #portfolio-icon {
   grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
 }
 
 #about-icon {
   grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+
+#resume-icon {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
 }
 
 #contact-icon {
   grid-column: 1 / span 1;
+  grid-row: 4 / span 1;
 }
 
 #bin-icon {
   grid-column: 12 / span 1;
   grid-row: 8 /span 1;
-  margin-right: 2em;
-  
-}
-
-#resume-icon {
-  grid-column: 1 / span 1;
 }
 
 #resume-container {
@@ -520,26 +523,22 @@ header {
 
 /* For responsive / mobile */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
   body {
     background-color: lightgreen;
+    max-width: 100%;
+    min-width: 375px;
+    overflow-x: hidden;
+  }
+
+  main {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  .desktop-icon {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
-
-  #bin-icon {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
-
-
-
-
+.desktop-icon {
+  margin: 0.2em;
+}
 
 
 
