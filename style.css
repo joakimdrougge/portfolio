@@ -418,7 +418,8 @@ header {
 #about-x-button,
 #window-x-button,
 #video-x-button,
-#resume-x-button {
+#resume-x-button,
+#bin-x-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,7 +439,8 @@ header {
 #about-x-button:focus, 
 #window-x-button:focus,
 #video-x-button:focus,
-#resume-x-button:focus {
+#resume-x-button:focus,
+#bin-x-button:focus {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
@@ -447,7 +449,8 @@ header {
 #about-x-button:hover,
 #window-x-button:hover,
 #video-x-button:hover,
-#resume-x-button:hover {
+#resume-x-button:hover
+#bin-x-button:hover {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
@@ -456,7 +459,8 @@ header {
 #about-x-button:active,
 #window-x-button:active,
 #video-x-button:active,
-#resume-x-button:active  {
+#resume-x-button:active,
+#bin-x-button:active  {
   border-top: solid #929292 1px;
   border-left: solid #929292 1px;
   border-right: solid white 1px;

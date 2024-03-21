@@ -22,14 +22,9 @@ closeButton.onclick = function () {
 /* Desktop window */
 
 var windowModal = document.getElementById("window-modal");
-var binBtn = document.getElementById("bin-icon");
 var portfolioBtn = document.getElementById("portfolio-icon");
 
 var xButton = document.getElementById("window-x-button");
-
-binBtn.ondblclick = function () {
-    windowModal.style.display = "grid";
-}
 
 portfolioBtn.ondblclick = function () {
     windowModal.style.display = "grid";
@@ -37,6 +32,21 @@ portfolioBtn.ondblclick = function () {
 
 xButton.onclick = function () {
     windowModal.style.display = "none";
+}
+
+/* Bin window */
+
+var binModal = document.getElementById("bin-modal");
+var binBtn = document.getElementById("bin-icon");
+
+var xButton = document.getElementById("bin-x-button");
+
+binBtn.ondblclick = function () {
+    binModal.style.display = "grid";
+}
+
+xButton.onclick = function () {
+    binModal.style.display = "none";
 }
 
 /* Resumé */
