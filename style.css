@@ -7,10 +7,11 @@
 /* :root 
 --grey: #c3c3c3
 --dark-grey: #929292
+--dark-grey-accent: #282429;
 --teal: #008080
 --blue: #030a8c
 --yellow: #ffffcf 
---copenhagen: #27352A; */
+--copenhagen: #253729; 25% saturated */
 
 * {
   box-sizing: border-box;
@@ -18,7 +19,7 @@
 }
 
 body {
-  background: #5E856C;
+  background: #253729;
 
   font-family: "W95";
   font-size: 16px;
@@ -229,6 +230,23 @@ header {
   z-index: 2;
  }
 
+ #video-window-container {
+  grid-column: 1 / span 12;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-content: center;
+
+  margin-top: 2em;
+  margin-left: 0.2em;
+  margin-bottom: 1em;
+  margin-right: 0.2em;
+
+  overflow-x: hidden;
+}
+
  #dotd-video {
   border-top: solid black 2px;
   border-left: solid black 2px;
@@ -237,14 +255,14 @@ header {
  }
 
  #video-text {
-   color: #030a8c;
+   color: #605F77;
    text-decoration: none;
    
    margin-top: 1em;
  }
 
  #video-text:link {
-   color: #030a8c;
+   color: #605F77;
  }
 
  #video-text:hover {
@@ -281,7 +299,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.2em;
-  background-color: #030a8c;
+  background-color: #605F77;
   
   border-right: solid #c3c3c3 1px;
   color: white;
@@ -310,23 +328,6 @@ header {
   border-left: solid black 2px;
   border-right: solid white 2px;
   border-bottom: solid white 2px;
-
-  overflow-x: hidden;
-}
-
-#video-window-container {
-  grid-column: 1 / span 12;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-items: center;
-  align-content: center;
-
-  margin-top: 2em;
-  margin-left: 0.2em;
-  margin-bottom: 1em;
-  margin-right: 0.2em;
 
   overflow-x: hidden;
 }
@@ -386,7 +387,6 @@ header {
 }
 
 #welcome-text {
-  background-color: beige;
   padding: 10px;
   margin: 10px;
 }
@@ -547,16 +547,16 @@ header {
 
 @media only screen and (max-width: 480px) {
   body {
-    background-color: #5E856C;
+    background-color: #253729;
     width: 100%;
 
     overflow-x: hidden;
   }
 
   .desktop-icon {
-  margin: 0.2em;
+    margin: 0.2em;
 
-  transform: scale(0.8);
+    transform: scale(0.8);
   }
 
   #bin-icon {
