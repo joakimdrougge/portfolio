@@ -172,10 +172,10 @@ header {
   grid-row: 8 /span 1;
 }
 
+/* Resumé container */
+
 #resume-container {
  display: none;
-
-
 
  justify-self: center;
  align-self: center;
@@ -201,6 +201,8 @@ header {
   overflow-x: hidden;
 }
 
+/* Poster container */
+
 #poster-container {
  display: none;
 
@@ -214,16 +216,16 @@ header {
  margin-top: 2em;
 }
 
+/* Video container */
+
 #video-container {
   display: none;
- 
-  justify-content: center;
- 
+
   position: fixed;
   bottom: 5em;
   right: 200px;
 
-  z-index: 1;
+  z-index: 2;
  }
 
  #dotd-video {
@@ -232,6 +234,21 @@ header {
   border-right: solid black 2px;
   border-bottom: solid black 2px;
  }
+
+ #video-text {
+   color: #030a8c;
+   text-decoration: none;
+   
+   margin-top: 1em;
+ }
+
+ #video-text:link {
+   color: #030a8c;
+ }
+
+ #video-text:hover {
+  text-decoration: underline;
+}
 
 /* Desktop window & pop-ups */
 
@@ -300,12 +317,14 @@ header {
   grid-column: 1 / span 12;
 
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-content: center;
 
   margin-top: 2em;
   margin-left: 0.2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   margin-right: 0.2em;
 
   overflow-x: hidden;
@@ -523,8 +542,6 @@ header {
    -webkit-appearance: button;
  }
 
-
-
 /* For responsive / mobile */
 
 @media only screen and (max-width: 480px) {
@@ -590,6 +607,10 @@ header {
     background-color: #030a8c;
     z-index: 4;
     cursor: pointer;
+  }
+
+  #overlay-icon {
+    transform: scale(2.5);
   }
 
   #overlay-text {
