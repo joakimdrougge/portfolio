@@ -9,7 +9,8 @@
 --dark-grey: #929292
 --teal: #008080
 --blue: #030a8c
---yellow: #ffffcf */
+--yellow: #ffffcf 
+--copenhagen: #27352A; */
 
 * {
   box-sizing: border-box;
@@ -17,7 +18,7 @@
 }
 
 body {
-  background: #008080;
+  background: #5E856C;
 
   font-family: "W95";
   font-size: 16px;
@@ -546,7 +547,7 @@ header {
 
 @media only screen and (max-width: 480px) {
   body {
-    background-color: lightgreen;
+    background-color: #5E856C;
     width: 100%;
 
     overflow-x: hidden;
