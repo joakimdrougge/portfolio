@@ -553,6 +553,13 @@ header {
     overflow-x: hidden;
   }
 
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 10px;
+
+    padding-top: 1em;
+  }
+
   .desktop-icon {
     margin: 0.2em;
 
@@ -561,7 +568,7 @@ header {
 
   #bin-icon {
     grid-column: 6 / span 1;
-    grid-row: 4 / span 1;
+    grid-row: 30 / span 1;
   }
 
   #logo-container {
@@ -580,14 +587,6 @@ header {
     cursor: help;
 
     padding: 5px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(6, 1fr);
-    row-gap: 10px;
-
-    padding-top: 2em;
-    padding-bottom: 2em;
   }
 
   /* Overlay mobile disclaimer */
