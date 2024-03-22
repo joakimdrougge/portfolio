@@ -28,7 +28,7 @@ body {
 
 main { 
   padding: 5px;
-  width: 100vw;
+  width: 100%;
 
   justify-items: center;
 }
@@ -233,8 +233,6 @@ header {
   border-bottom: solid black 2px;
  }
 
-
-
 /* Desktop window & pop-ups */
 
 .section-container {
@@ -376,6 +374,12 @@ header {
 #profile-picture {
   border: 10px white solid;
   margin: 50px 10px 10px 10px;
+}
+
+/* Overlay */
+
+#overlay, #overlay-text {
+  display: none;
 }
 
 /* Button styling */
@@ -526,22 +530,24 @@ header {
 @media only screen and (max-width: 480px) {
   body {
     background-color: lightgreen;
-    width: 100vw;
+    width: 100%;
 
     overflow-x: hidden;
   }
 
   .desktop-icon {
   margin: 0.2em;
+
+  transform: scale(0.8);
   }
 
   #bin-icon {
-    grid-column: 9 / span 1;
-    margin: 0.2em;
+    grid-column: 6 / span 1;
+    grid-row: 4 / span 1;
   }
 
   #logo-container {
-    grid-column: 3 / span 6;
+    grid-column: 2 / span 4;
     grid-row: 2 / span 2;
   
     display: flex;
@@ -551,9 +557,46 @@ header {
   
     align-items: center;
   
-    transform: scale(1.0);
+    transform: scale(1.5);
   
     cursor: help;
+
+    padding: 5px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 10px;
+
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  #overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #030a8c;
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  #overlay-text {
+    display: block;
+    color: white;
+    margin: 2em;
+    text-align: center;
   }
 
 }

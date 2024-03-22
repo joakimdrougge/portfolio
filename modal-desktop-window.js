@@ -1,3 +1,15 @@
+/* Close mobile overlay disclaimer */
+
+document.addEventListener('click', function (event) {
+    var overlay = document.getElementById("overlay");
+    var overlayText = document.getElementById("overlay-text");
+
+    if (event.target === overlay) {
+        overlay.style.display = "none";
+        overlayText.style.display = "none"
+    }
+});
+
 /* About window */
 
 var aboutModal = document.getElementById("about-modal");
