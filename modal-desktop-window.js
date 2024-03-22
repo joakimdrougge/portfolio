@@ -82,13 +82,14 @@ xButton.onclick = function () {
 
 var poster = document.getElementById("poster-container");
 var posterBtn = document.getElementById("poster-icon");
-var posterImg = document.getElementById("poster-image");
 
 posterBtn.ondblclick = function () {
-    poster.style.display = "block";
+    poster.style.display = "flex";
 }
 
-posterImg.onclick = function () {
+var xButton = document.getElementById("poster-x-button");
+
+xButton.onclick = function () {
     poster.style.display = "none";
 }
 

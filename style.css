@@ -110,6 +110,68 @@ header {
   position: fixed;
 }
 
+/* Desktop window & pop-ups */
+
+.section-header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em;
+  background-color: #605F77;
+  
+  border-right: solid #c3c3c3 1px;
+  color: white;
+  width: 100%;
+}
+
+.section-container {
+  display: none;
+
+  align-self: center;
+  
+  gap: 10px;
+  grid-row-gap: 0;
+
+  background-color: #c3c3c3;
+
+  border-top: solid white 2px;
+  border-left: solid white 2px;
+  border-right: solid black 2px;
+  border-bottom: solid black 2px;
+
+  width: 32em;
+
+  z-index: 1;
+  position: fixed;
+  }
+
+.window-content-container {
+  grid-column: 1 / span 12;
+
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+
+  margin-top: 1em;
+  margin-left: 0.2em;
+  margin-bottom: 1em;
+  margin-right: 0.2em;
+
+  padding: 10px 10px;
+
+  background-color: beige;
+
+  min-height: 350px;
+
+  border-top: solid black 2px;
+  border-left: solid black 2px;
+  border-right: solid white 2px;
+  border-bottom: solid white 2px;
+
+  overflow-x: hidden;
+}
+
 /* Desktop & window icons */
 
 .desktop-icon {
@@ -208,14 +270,15 @@ header {
 
 #poster-container {
  display: none;
-
- align-self: center;
+ flex-direction: column;
+ justify-items: center;
+ align-items: center;
 
  z-index: 2;
 
  position: fixed;
  right: 50px;
-
+ object-fit: cover;
  margin-top: 2em;
 }
 
@@ -268,69 +331,6 @@ header {
 
  #video-text:hover {
   text-decoration: underline;
-}
-
-/* Desktop window & pop-ups */
-
-.section-header {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2em;
-  background-color: #605F77;
-  
-  border-right: solid #c3c3c3 1px;
-  color: white;
-  width: 100%;
-}
-
-.section-container {
-  display: none;
-
-  justify-self: center;
-  align-self: center;
-  
-  gap: 10px;
-  grid-row-gap: 0;
-
-  background-color: #c3c3c3;
-
-  border-top: solid white 2px;
-  border-left: solid white 2px;
-  border-right: solid black 2px;
-  border-bottom: solid black 2px;
-
-  width: 32em;
-
-  z-index: 1;
-  position: fixed;
-  }
-
-.window-content-container {
-  grid-column: 1 / span 12;
-
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-
-  margin-top: 1em;
-  margin-left: 0.2em;
-  margin-bottom: 1em;
-  margin-right: 0.2em;
-
-  padding: 10px 10px;
-
-  background-color: beige;
-
-  min-height: 350px;
-
-  border-top: solid black 2px;
-  border-left: solid black 2px;
-  border-right: solid white 2px;
-  border-bottom: solid white 2px;
-
-  overflow-x: hidden;
 }
 
 /* About window */
@@ -447,7 +447,8 @@ header {
 #window-x-button,
 #video-x-button,
 #resume-x-button,
-#bin-x-button {
+#bin-x-button,
+#poster-x-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,7 +469,8 @@ header {
 #window-x-button:focus,
 #video-x-button:focus,
 #resume-x-button:focus,
-#bin-x-button:focus {
+#bin-x-button:focus,
+#poster-x-button:focus {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
@@ -478,7 +480,8 @@ header {
 #window-x-button:hover,
 #video-x-button:hover,
 #resume-x-button:hover
-#bin-x-button:hover {
+#bin-x-button:hover,
+#poster-x-button:hover {
   outline: 0.5px dashed white ;
   outline-offset: -2px;
   color: white;
@@ -488,7 +491,8 @@ header {
 #window-x-button:active,
 #video-x-button:active,
 #resume-x-button:active,
-#bin-x-button:active  {
+#bin-x-button:active,
+#poster-x-button:active  {
   border-top: solid #929292 1px;
   border-left: solid #929292 1px;
   border-right: solid white 1px;
@@ -569,7 +573,7 @@ header {
 
   #bin-icon {
     grid-column: 6 / span 1;
-    grid-row: 20 / span 1;
+    grid-row: 15 / span 1;
   }
 
   #logo-container {
