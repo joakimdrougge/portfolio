@@ -101,7 +101,7 @@ var videoBtn = document.getElementById("video-icon");
 var videoImg = document.getElementById("dotd-video");
 
 videoBtn.ondblclick = function () {
-    video.style.display = "grid";
+    video.style.display = "flex";
 }
 
 var xButton = document.getElementById("video-x-button");
