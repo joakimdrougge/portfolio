@@ -592,7 +592,7 @@ header {
   body {
     background-color: #253729;
     width: 100%;
-    min-width: 450px;
+    min-width: 375px;
 
     overflow-x: hidden;
   }
@@ -681,6 +681,17 @@ header {
   }
 
   /* About container */
+  #window-modal {
+    left: 50px;
+    top: 25px;
+}
+
+/* Bin modal */
+
+#bin-modal {
+  right: 50px;
+  bottom: 100px;
+}
 
 
   /* Resume container */
@@ -693,8 +704,14 @@ header {
     justify-items: center;
     margin-top: 2em;
     margin-bottom: 0;
+
     left: 100px;
     bottom: 85px;
+}
+
+  #resume-pdf {
+  width: 300px;
+  height: 400px;
 }
 
   /* Poster container */
@@ -706,7 +723,7 @@ header {
     width: 350px;
     object-fit: contain;
     position: fixed;
-    left: 40px;
+    left: 20px;
     margin-top: 2em;
 }
 
@@ -718,10 +735,10 @@ header {
     align-items: center;
     justify-items: center;
 
-    min-width: 400px;
+    min-width: 350px;
 
     position: fixed;
-    right: 20px;
+    right: 10px;
     bottom: 150px;
     z-index: 2;
 }

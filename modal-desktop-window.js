@@ -68,7 +68,7 @@ var resumeBtn = document.getElementById("resume-icon");
 var resumeImg = document.getElementById("resume-image");
 
 resumeBtn.ondblclick = function () {
-    resume.style.display = "grid";
+    resume.style.display = "flex";
 }
 
 var xButton = document.getElementById("resume-x-button");
