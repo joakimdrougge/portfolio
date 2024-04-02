@@ -326,6 +326,8 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 
+  min-height: 500px;
+
   object-fit: contain;
 
   overflow-x: hidden;
@@ -737,6 +739,8 @@ header {
     display: none;
     flex-direction: column;
 
+    width: 350px;
+
     margin-top: 2em;
     margin-bottom: 0;
 
@@ -745,7 +749,6 @@ header {
 }
 
   #resume-pdf {
-    width: 350px;
     object-fit: contain;
 }
 
