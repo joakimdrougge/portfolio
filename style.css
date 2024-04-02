@@ -95,7 +95,7 @@ header {
   background-color: #c3c3c3;
   min-width: 200px;
   min-height: 50vh;
-  z-index: 1;
+  z-index: 5;
 
   border-top: solid white 2px;
   border-left: solid white 2px;
@@ -312,13 +312,10 @@ header {
  display: none;
  flex-direction: column;
 
- justify-self: center;
- align-self: center;
-
- justify-items: center;
-
  margin-top: 2em;
  margin-bottom: 0;
+
+ width: 400px;
 
  left: 100px;
  bottom: 85px;
@@ -329,6 +326,8 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 
+  object-fit: contain;
+
   overflow-x: hidden;
 }
 
@@ -338,19 +337,15 @@ header {
  display: none;
  flex-direction: column;
 
- justify-items: center;
-
  width: 400px;
- object-fit: contain;
 
- position: fixed;
  left: 100px;
- 
  margin-top: 2em;
 }
 
 #poster-image {
   margin: 10px;
+  object-fit: contain;
 }
 
 /* Video container */
@@ -582,67 +577,6 @@ header {
   outline: 0;
 }
 
-/* #about-x-button,
-#window-x-button,
-#video-x-button,
-#resume-x-button,
-#bin-x-button,
-#poster-x-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  background-color: #c3c3c3;
-  border-top: solid white 1px;
-  border-left: solid white 1px;
-  border-right: solid #929292 1px;
-  border-bottom: solid #929292 1px;
-
-  height: 1em;
-  width: 1em;
-
-  padding: 1px;
-  padding-bottom: 2px;
-
-  margin: 2px;
-}  */
-
-/* #about-x-button:focus, 
-#window-x-button:focus,
-#video-x-button:focus,
-#resume-x-button:focus,
-#bin-x-button:focus,
-#poster-x-button:focus {
-  outline: 0.5px dashed white ;
-  outline-offset: -2px;
-  color: white;
-} */
-
-/* #about-x-button:hover,
-#window-x-button:hover,
-#video-x-button:hover,
-#resume-x-button:hover
-#bin-x-button:hover,
-#poster-x-button:hover {
-  outline: 0.5px dashed white ;
-  outline-offset: -2px;
-  color: white;
-} */
-
-/* #about-x-button:active,
-#window-x-button:active,
-#video-x-button:active,
-#resume-x-button:active,
-#bin-x-button:active,
-#poster-x-button:active  {
-  border-top: solid #929292 1px;
-  border-left: solid #929292 1px;
-  border-right: solid white 1px;
-  border-bottom: solid white 1px;
-
-  outline: 0;
-} */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -802,19 +736,17 @@ header {
   #resume-container {
     display: none;
     flex-direction: column;
-    justify-self: center;
-    align-self: center;
-    justify-items: center;
+
     margin-top: 2em;
     margin-bottom: 0;
 
-    left: 40px;
+    left: 35px;
     bottom: 85px;
 }
 
   #resume-pdf {
-  width: 300px;
-  height: 400px;
+    width: 350px;
+    object-fit: contain;
 }
 
   /* Poster container */
@@ -822,11 +754,10 @@ header {
   #poster-container {
     display: none;
     flex-direction: column;
-    justify-items: center;
+
     width: 350px;
-    object-fit: contain;
-    position: fixed;
-    left: 20px;
+
+    left: 15px;
     margin-top: 2em;
 }
 
@@ -977,34 +908,6 @@ header {
 
     margin: 0;
   }
-
-  /* #about-x-button,
-  #window-x-button,
-  #video-x-button,
-  #resume-x-button,
-  #bin-x-button,
-  #poster-x-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  background-color: #c3c3c3;
-
-  border-top: solid white 1px;
-  border-left: solid white 1px;
-  border-right: solid #929292 1px;
-  border-bottom: solid #929292 1px;
-
-  height: 16px;
-  width: 16px;
-
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 2px;
-
-  margin: 0;
-}  */
 
 }
 
