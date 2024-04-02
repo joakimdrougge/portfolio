@@ -749,6 +749,7 @@ header {
 }
 
   #resume-pdf {
+    width: 250px;
     object-fit: contain;
 }
 
