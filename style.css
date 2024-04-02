@@ -311,11 +311,12 @@ header {
 #resume-container {
  display: none;
  flex-direction: column;
+ align-items: center;
 
  margin-top: 2em;
  margin-bottom: 0;
 
- width: 400px;
+ 
 
  left: 100px;
  bottom: 85px;
@@ -326,7 +327,8 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 
-  min-height: 500px;
+  height: 450px;
+  width: 350px;
 
   object-fit: contain;
 
@@ -339,13 +341,15 @@ header {
  display: none;
  flex-direction: column;
 
- width: 400px;
+ align-items: center;
 
  left: 100px;
  margin-top: 2em;
 }
 
 #poster-image {
+  height: 450px;
+ 
   margin: 10px;
   object-fit: contain;
 }
@@ -738,18 +742,21 @@ header {
   #resume-container {
     display: none;
     flex-direction: column;
+    align-items: center;
 
-    width: 300px;
+    align-self: center;
 
-    margin-top: 2em;
-    margin-bottom: 0;
+    width: 350px;
 
-    left: 35px;
-    bottom: 85px;
+    margin-top: 4em;
+    left: 15px;
+    
 }
 
   #resume-pdf {
-    width: 250px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 346px;
     object-fit: contain;
 }
 
