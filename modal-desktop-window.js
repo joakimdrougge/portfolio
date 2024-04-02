@@ -121,3 +121,23 @@ function toggleText() {
         logoText.style.display = "none";
     }
 }
+
+/* Drop-up start menu */
+
+function toggleDropup() {
+    var dropdown = document.getElementById("drop-up-links");
+    dropdown.classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('#start-button')) {
+        var dropups = document.getElementsByClassName("drop-up-content");
+        for (var i = 0; i < dropups.length; i++) {
+            var openDropup = dropups[i];
+            if (openDropup.classList.contains('show')) {
+                openDropup.classList.remove('show');
+            }
+        }
+    }
+}

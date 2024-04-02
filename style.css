@@ -46,6 +46,9 @@ main {
 header {
   padding: 5px 10px;
   background: #c3c3c3;
+
+  border-top: solid white 2px;;
+
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -75,6 +78,55 @@ header {
 
   width: auto;
   
+}
+
+/* Drop-up start menu */
+
+.drop-up-menu {
+  position: relative;
+}
+
+/* Drop-up content (hidden) */
+.drop-up-content {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  background-color: #c3c3c3;
+  min-width: 200px;
+  min-height: 50vh;
+  z-index: 1;
+
+  border-top: solid white 2px;
+  border-left: solid white 2px;
+  border-right: solid #929292 2px;
+  border-bottom: solid #929292 2px;;
+}
+
+.drop-up-content :nth-child(4) {
+  margin-top: auto;
+
+  border-top: solid white 1px;
+  border-bottom: 0;
+}
+
+/* Drop up links */
+
+.drop-up-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+
+  border-bottom: solid white 1px;
+}
+
+.drop-up-content a:hover {
+  background-color: #605F77;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Logo */
@@ -417,7 +469,7 @@ header {
 }
 
 #about-heading-text {
-  align-self: flex-end;
+  align-self: flex-start;
   font-size: 128px;
   order: 1;
 
@@ -701,7 +753,7 @@ header {
   }
 
   #profile-picture {
-    align-self: flex-start;
+    align-self: flex-end;
     order: 2;
   
     margin: 0.5em;
@@ -712,7 +764,7 @@ header {
   }
 
   #about-heading-text {
-    align-self: flex-end;
+    align-self: flex-start;
     font-size: 64px;
     order: 1;
   
