@@ -750,14 +750,13 @@ header {
     width: 350px;
     height: 450px;
 
-    left: 15px;
+    left: 1rem;
+    bottom: 130px;
     
 }
 
   #resume-pdf {
     width: 342px;
-
-    
 }
 
   /* Poster container */
@@ -771,6 +770,11 @@ header {
     left: 15px;
     margin-top: 2em;
 }
+
+#poster-image {
+  height: 450px;
+}
+
 
   /* Video container */
 
