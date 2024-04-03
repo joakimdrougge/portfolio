@@ -70,6 +70,10 @@ header {
   width: auto;
 }
 
+#start-button:hover {
+  color: white;
+}
+
 #desktop-clock {
   border-top: solid #929292 1px;
   border-left: solid #929292 1px;
@@ -122,6 +126,7 @@ header {
 
 .drop-up-content a:hover {
   background-color: #605F77;
+  color: white;
 }
 
 .show {
@@ -211,7 +216,7 @@ header {
 
   padding: 10px 10px;
 
-  background-color: beige;
+  background-color: #dac8d6;
 
   min-height: 350px;
   min-width: 450px;
@@ -296,7 +301,7 @@ header {
 
 /* Modal placement */
 
-#window-modal {
+#portfolio-modal {
   left: 80px;
   top: 25px;
 }
@@ -316,8 +321,6 @@ header {
  margin-top: 2em;
  margin-bottom: 0;
 
- 
-
  left: 100px;
  bottom: 85px;
  
@@ -327,8 +330,8 @@ header {
   margin-top: 1em;
   margin-bottom: 1em;
 
-  height: 450px;
-  width: 350px;
+  height: 550px;
+  width: 450px;
 
   object-fit: contain;
 
@@ -343,12 +346,12 @@ header {
 
  align-items: center;
 
- left: 100px;
+ left: 300px;
  margin-top: 2em;
 }
 
 #poster-image {
-  height: 450px;
+  height: 550px;
  
   margin: 10px;
   object-fit: contain;
@@ -414,8 +417,6 @@ header {
 }
 
 #left-column {
- 
-
   display: flex;
   flex-direction: row; /* DEFAULT */
   flex-wrap: wrap;
@@ -430,7 +431,7 @@ header {
 
   padding: 10px 10px;
 
-  background-color: beige;
+  background-color: #dac8d6;
 
   border-top: solid #929292 2px;
   border-left: solid #929292 2px;
@@ -724,7 +725,7 @@ header {
   }
 
   /* About container */
-  #window-modal {
+  #portfolio-modal {
     left: 50px;
     top: 25px;
 }
@@ -748,16 +749,15 @@ header {
 
     width: 350px;
     height: 450px;
-    
+
     left: 15px;
     
 }
 
   #resume-pdf {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 346px;
-    object-fit: contain;
+    width: 342px;
+
+    
 }
 
   /* Poster container */

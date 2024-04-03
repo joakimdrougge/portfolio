@@ -33,7 +33,7 @@ closeButton.onclick = function () {
 
 /* Desktop window */
 
-var windowModal = document.getElementById("window-modal");
+var windowModal = document.getElementById("portfolio-modal");
 var portfolioBtn = document.getElementById("portfolio-icon");
 
 var xButton = document.getElementById("window-x-button");
