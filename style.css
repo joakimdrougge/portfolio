@@ -4,14 +4,36 @@
     url(assets/W95FA/w95fa.woff) format("woff");
 }
 
-/* :root 
---grey: #c3c3c3
---dark-grey: #929292
---dark-grey-accent: #605F77;
---teal: #008080
---blue: #030a8c
---yellow: #ffffcf 
---copenhagen: #253729; 25% saturated */
+:root {
+/* Original colour scheme */
+
+  /* --container-colour: #c3c3c3;
+  --container-background: #FAE6F6;
+  --container-accent: #605F77;
+
+  --border-light: white;
+  --border-dark: #929292; 
+  
+  --element-accent-light: #fbf7f7;
+  --element-accent-highlight: black; */
+  
+/* Färgglad colour scheme */
+
+  --container-colour: #d4a9b2;
+  --container-background: #B8E5E3;
+
+  --container-accent: #df697c;
+
+  --border-light: #fbf7f7;
+  --border-dark: #B08D94;
+
+  --element-accent-light: #fbf7f7;
+  --element-accent-highlight: #df697c;
+
+/* Wallpaper colour */
+
+  --wallpaper: #253729;   /* Copenhagen Green - 25% saturated */
+}
 
 * {
   box-sizing: border-box;
@@ -19,10 +41,11 @@
 }
 
 body {
-  background: #253729;
+  background-color: #253729;
 
   font-family: "W95";
   font-size: 16px;
+
   margin: auto;
   width: auto;
   
@@ -44,17 +67,18 @@ main {
 /* Menu bar */
 
 header {
+  background-color: var(--container-colour);
+
+  border-top: solid var(--border-light) 2px;;
+
   padding: 5px 10px;
-  background: #c3c3c3;
 
-  border-top: solid white 2px;;
-
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  z-index: 3;
+  
+  position: fixed;
+  z-index: 5;
 
-  max-width: 100%;
+  bottom: 0;
 }
 
 .menu-bar {
@@ -71,17 +95,16 @@ header {
 }
 
 #start-button:hover {
-  color: white;
+  color: var(--element-accent-light);
 }
 
 #desktop-clock {
-  border-top: solid #929292 1px;
-  border-left: solid #929292 1px;
-  border-right: solid white 1px;
-  border-bottom: solid white 1px;
+  border-top: solid var(--border-dark) 1px;
+  border-left: solid var(--border-dark) 1px;
+  border-right: solid var(--border-light) 1px;
+  border-bottom: solid var(--border-light) 1px;
 
   width: auto;
-  
 }
 
 /* Drop-up start menu */
@@ -93,24 +116,28 @@ header {
 /* Drop-up content (hidden) */
 .drop-up-content {
   display: none;
-  position: absolute;
-  bottom: 20px;
-  left: 0px;
-  background-color: #c3c3c3;
+ 
+  background-color: var(--container-colour);
+  
+  border-top: solid var(--border-light) 2px;
+  border-left: solid var(--border-light) 2px;
+  border-right: solid var(--border-dark) 2px;
+  border-bottom: solid var(--border-dark) 2px;;
+
   min-width: 200px;
   min-height: 50vh;
+
+  position: absolute;
   z-index: 5;
 
-  border-top: solid white 2px;
-  border-left: solid white 2px;
-  border-right: solid #929292 2px;
-  border-bottom: solid #929292 2px;;
+  bottom: 20px;
+  left: 0px;
 }
 
 .drop-up-content :nth-child(4) {
   margin-top: auto;
 
-  border-top: solid white 1px;
+  border-top: solid var(--border-light) 1px;
   border-bottom: 0;
 }
 
@@ -118,15 +145,17 @@ header {
 
 .drop-up-content a {
   color: black;
-  padding: 12px 16px;
   text-decoration: none;
 
-  border-bottom: solid white 1px;
+  border-bottom: solid var(--border-light) 1px;
+
+  padding: 12px 16px;
 }
 
 .drop-up-content a:hover {
-  background-color: #605F77;
-  color: white;
+  background-color: var(--container-accent);
+
+  color: var(--element-accent-light);
 }
 
 .show {
@@ -156,7 +185,7 @@ header {
   display: none;
 
   font-size: 6px;
-  color: white;
+  color: var(--element-accent-light);
 
   margin-top: 6em;
   margin-left: 1em;
@@ -167,6 +196,10 @@ header {
   position: fixed;
 }
 
+.toggleLogoText {
+  display: block;
+}
+
 /* Desktop window & pop-ups */
 
 .section-header {
@@ -175,31 +208,31 @@ header {
   align-items: center;
   justify-content: space-between;
 
+  background-color: var(--container-accent);
+
+  color: var(--element-accent-light); 
+
   padding: 0.2em;
-  background-color: #605F77; 
   
-  border-right: solid #c3c3c3 1px;
-  color: white;
   width: 100%;
 }
 
 .section-container {
   display: none;
-
   align-self: center;
   
   gap: 10px;
   grid-row-gap: 0;
 
-  background-color: #c3c3c3;
+  background-color: var(--container-colour);
 
-  border-top: solid white 2px;
-  border-left: solid white 2px;
-  border-right: solid #929292 2px;
-  border-bottom: solid #929292 2px;
+  border-top: solid var(--border-light) 2px;
+  border-left: solid var(--border-light) 2px;
+  border-right: solid var(--border-dark) 2px;
+  border-bottom: solid var(--border-dark) 2px;
 
-  z-index: 1;
   position: fixed;
+  z-index: 1;
   }
 
 .window-content-container {
@@ -209,6 +242,8 @@ header {
   flex-direction: row;
   justify-items: center;
 
+  background-color: var(--container-background);
+
   margin-top: 1em;
   margin-left: 0.2em;
   margin-bottom: 1em;
@@ -216,15 +251,13 @@ header {
 
   padding: 10px 10px;
 
-  background-color: #FAE6F6;
-
   min-height: 350px;
   min-width: 450px;
 
-  border-top: solid #929292 2px;
-  border-left: solid #929292 2px;
-  border-right: solid white 2px;
-  border-bottom: solid white 2px;
+  border-top: solid var(--border-dark) 2px;
+  border-left: solid var(--border-dark) 2px;
+  border-right: solid var(--border-light) 2px;
+  border-bottom: solid var(--border-light) 2px;
 
   overflow-x: hidden;
 }
@@ -233,20 +266,18 @@ header {
 
 .desktop-icon {
   display: flex;
-
   flex-direction: column;
   align-items: center;
+  
   max-width: 64px;
-  
-  cursor: pointer;
-
   margin: 5px;
-  
+
+  cursor: pointer;
 }
 
 .desktop-icon-text {
   margin: 0px;
-  color: white;
+  color: var(--element-accent-light);
 }
 
 .window-icon {
@@ -269,7 +300,6 @@ header {
 .window-icon-text {
   text-align: center;
 
- 
   margin: 0;
   color: black;
 }
@@ -354,6 +384,7 @@ header {
   height: 550px;
  
   margin: 10px;
+
   object-fit: contain;
 }
 
@@ -366,14 +397,15 @@ header {
   justify-items: center;
 
   position: fixed;
+  z-index: 2;
+
   right: 40px;
   bottom: 150px;
-  z-index: 2;
  }
 
  #dotd-video {
   width: 500px;
-  object-fit: cover;
+  object-fit: contain;
 
   margin-top: 2em;
   margin-left: 0.2em;
@@ -389,18 +421,15 @@ header {
  #video-text {
   align-self: flex-start;
 
-  color: #605F77;
+  color: var(--element-accent-light);
   text-decoration: none;
    
   margin-left: 0.5em;
   margin-bottom: 1em;
  }
 
- #video-text:link {
-   color: #605F77;
- }
-
  #video-text:hover {
+  color: var(--element-accent-light);
   text-decoration: underline;
 }
 
@@ -431,12 +460,12 @@ header {
 
   padding: 10px 10px;
 
-  background-color: #dac8d6;
+  background-color: var(--container-background);
 
-  border-top: solid #929292 2px;
-  border-left: solid #929292 2px;
-  border-right: solid white 2px;
-  border-bottom: solid white 2px;
+  border-top: solid var(--border-dark) 2px;
+  border-left: solid var(--border-dark) 2px;
+  border-right: solid var(--border-light) 2px;
+  border-bottom: solid var(--border-light) 2px;
 
   overflow-x: hidden;
 }
@@ -471,27 +500,33 @@ header {
 }
 
 #about-heading-text {
-  align-self: flex-start;
   font-size: 128px;
+  text-decoration: underline;
   order: 1;
 
-  margin: 0.2em;
-  margin-left: 0.1em;
-  margin-bottom: 0;
+  margin: 1rem 1rem 0 1rem;
+  
   padding: 0;
 }
 
 #about-text {
-  padding-left: 0.2em;
-  margin: 0.5em;
+  padding: 0.5em;
+  margin: 1.5em 1em 1em 1em;
   order: 3;
 }
 
 #profile-picture {
-  align-self: flex-end;
   order: 2;
 
-  margin: 0.5em 1em 1em 0.5em;
+  height: 120px;
+
+  border-radius: 2%;
+
+  border: solid white 1px;
+
+  object-fit: contain;
+
+  margin: 1em 1.5em 0 1em;
 }
 
 /* Overlay */
@@ -503,11 +538,11 @@ header {
 /* Button styling */
 
 .button {
-  background-color: #c3c3c3;
-  border-top: solid white 2px;
-  border-left: solid white 2px;
-  border-right: solid #929292 2px;
-  border-bottom: solid #929292 2px;
+  background-color: var(--container-colour);
+  border-top: solid var(--border-light) 2px;
+  border-left: solid var(--border-light) 2px;
+  border-right: solid var(--border-dark) 2px;
+  border-bottom: solid var(--border-dark) 2px;
 
   height: 1.5em;
   width: 8em;
@@ -521,22 +556,22 @@ header {
 }
 
 .button:focus {
-  outline: 1px dashed white ;
+  outline: 1px dashed var(--element-accent-light) ;
   outline-offset: -4px;
-  color: white;
+  color: var(--element-accent-light);
 }
 
 .button:hover {
-  outline: 1px dashed white ;
+  outline: 1px dashed var(--element-accent-light) ;
   outline-offset: -4px;
-  color: white;
+  color: var(--element-accent-light);
 }
 
 .button:active {
-  border-top: solid #929292 2px;
-  border-left: solid #929292 2px;
-  border-right: solid white 2px;
-  border-bottom: solid white 2px;
+  border-top: solid var(--border-dark) 2px;
+  border-left: solid var(--border-dark) 2px;
+  border-right: solid var(--border-light) 2px;
+  border-bottom: solid var(--border-light) 2px;
 
   outline: 0;
 }
@@ -545,12 +580,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: black;
-  background-color: #c3c3c3;
-  border-top: solid white 1px;
-  border-left: solid white 1px;
-  border-right: solid #929292 1px;
-  border-bottom: solid #929292 1px;
+
+  background-color: var(--container-colour);
+  border-top: solid var(--border-light) 1px;
+  border-left: solid var(--border-light) 1px;
+  border-right: solid var(--border-dark) 1px;
+  border-bottom: solid var(--border-dark) 1px;
 
   height: 1em;
   width: 1em;
@@ -564,22 +601,22 @@ header {
 }
 
 .x-button:focus {
-    outline: 0.5px dashed white ;
+    outline: 0.5px dashed var(--element-accent-light) ;
     outline-offset: -2px;
-    color: white;
+    color: var(--element-accent-light);
 }
 
 .x-button:hover {
-  outline: 0.5px dashed white ;
+  outline: 0.5px dashed var(--element-accent-light) ;
   outline-offset: -2px;
-  color: white;
+  color: var(--element-accent-light);
 }
 
 .x-button:active {
-  border-top: solid #929292 1px;
-  border-left: solid #929292 1px;
-  border-right: solid white 1px;
-  border-bottom: solid white 1px;
+  border-top: solid var(--border-dark) 1px;
+  border-left: solid var(--border-dark) 1px;
+  border-right: solid var(--border-light) 1px;
+  border-bottom: solid var(--border-light) 1px;
 
   outline: 0;
 }
@@ -677,7 +714,6 @@ header {
   }
 
   #left-column {
-    justify-content: space-between;
 
     margin-top: 1em;
     margin-left: 0.2em;
@@ -694,33 +730,29 @@ header {
   }
 
   #profile-picture {
-    align-self: flex-end;
+    align-self: center;
     order: 2;
+
+    height: 96px;
   
-    margin: 0.5em;
-
-    margin-right: 1em;
-
-    margin-bottom: 0.5em;
+    margin: 0.2em 0.2em 0 0.2em;
   }
 
   #about-heading-text {
-    align-self: flex-start;
-    font-size: 64px;
+    align-self: center;
+    font-size: 96px;
     order: 1;
   
     padding: 0;
   
-    margin: 0.5em;
-    margin-bottom: 0.4em;
-    margin-left: 0;
+    margin: 0.2rem 0.2rem 0 0.2rem;
   }
 
   #about-text {
     text-align: left;
 
-    padding: 0;
-    margin: 0 0.2em 0.2em 0.2em;
+    padding: 0.2em;
+    margin: 1rem 0.2rem 0.2rem 0.2rem;
     order: 3;
   }
 
@@ -787,14 +819,15 @@ header {
     min-width: 350px;
 
     position: fixed;
+    z-index: 2;
+
     right: 10px;
     bottom: 150px;
-    z-index: 2;
 }
 
   #dotd-video {
     width: 350px;
-    object-fit: cover;
+    object-fit: contain;
     margin-top: 2em;
     margin-left: 0.2em;
     margin-bottom: 1em;
@@ -850,15 +883,19 @@ header {
 
     flex-wrap: nowrap;
 
+    background-color: var(--container-accent);
+
     position: fixed;
     width: 100%;
     height: 100%;
+    
+    z-index: 6;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #605F77;
-    z-index: 4;
+
+
     cursor: pointer;
   }
 
@@ -876,7 +913,7 @@ header {
 
   #overlay-text {
     display: block;
-    color: white;
+    color: var(--element-accent-light);
     margin: 2em;
     text-align: center;
   }
@@ -884,11 +921,11 @@ header {
   /* Responsive button styling */
 
   .button {
-    background-color: #c3c3c3;
-    border-top: solid white 2px;
-    border-left: solid white 2px;
-    border-right: solid #929292 2px;
-    border-bottom: solid #929292 2px;
+    background-color: var(--container-colour);
+    border-top: solid var(--border-light) 2px;
+    border-left: solid var(--border-light) 2px;
+    border-right: solid var(--border-dark) 2px;
+    border-bottom: solid var(--border-dark) 2px;
   
     height: 1.5em;
     width: 5em;
@@ -906,12 +943,12 @@ header {
     align-items: center;
     justify-content: center;
     color: black;
-    background-color: #c3c3c3;
+    background-color: var(--container-colour);
 
-    border-top: solid white 1px;
-    border-left: solid white 1px;
-    border-right: solid #929292 1px;
-    border-bottom: solid #929292 1px;
+    border-top: solid var(--border-light) 1px;
+    border-left: solid var(--border-light) 1px;
+    border-right: solid var(--border-dark) 1px;
+    border-bottom: solid var(--border-dark) 1px;
 
     height: 16px;
     width: 16px;
@@ -936,7 +973,7 @@ header {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #c3c3c3;
+  background-color: var(--container-colour);
   border-top: solid white 2px;
 } */
 
