@@ -23,7 +23,7 @@
   /* --container-background: #B8E5E3; */
   --container-background: #cbecfe;
 
-  --container-accent: #df697c;
+  --container-accent:   ;
 
   --border-light: #fbf7f7;
   --border-dark: #B08D94;
@@ -737,7 +737,7 @@ header {
 
     height: 96px;
   
-    margin: 0.2em 0.2em 0 0.2em;
+    margin: 0.2em 1.5em 0 0.2em;
   }
 
   #about-heading-text {
@@ -758,7 +758,7 @@ header {
     order: 3;
   }
 
-  /* About container */
+/* About container */
   #portfolio-modal {
     left: 50px;
     top: 25px;
@@ -772,7 +772,7 @@ header {
 }
 
 
-  /* Resume container */
+/* Resume container */
 
   #resume-container {
     display: none;
