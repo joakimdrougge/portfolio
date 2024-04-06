@@ -19,8 +19,9 @@
   
 /* Färgglad colour scheme */
 
-  --container-colour: #d4a9b2;
-  --container-background: #B8E5E3;
+  --container-colour: #d4a9b2; 
+  /* --container-background: #B8E5E3; */
+  --container-background: #cbecfe;
 
   --container-accent: #df697c;
 
@@ -33,7 +34,8 @@
 /* Wallpaper colour */
 
   --wallpaper: #253729;   /* Copenhagen Green - 25% saturated */
-}
+  /* --wallpaper-fg: #15ab59; */
+} /* --wallpaper-fg-2: #33B06B; */
 
 * {
   box-sizing: border-box;
@@ -41,7 +43,7 @@
 }
 
 body {
-  background-color: #253729;
+  background-color: #227F4C;
 
   font-family: "W95";
   font-size: 16px;
@@ -526,7 +528,7 @@ header {
 
   object-fit: contain;
 
-  margin: 1em 1.5em 0 1em;
+  margin: 1em 2.5em 0 1em;
 }
 
 /* Overlay */
