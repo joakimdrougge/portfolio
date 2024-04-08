@@ -537,6 +537,7 @@ header {
   display: none;
 }
 
+
 /* Button styling */
 
 .button {
@@ -677,6 +678,8 @@ header {
     background-color: #227F4C;
     width: 100%;
     min-width: 375px;
+
+    line-height: 1;
 
     overflow-x: hidden;
   }
