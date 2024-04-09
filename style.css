@@ -490,7 +490,7 @@ header {
   
 }
 
-#right-column :nth-child(4) { /* CLOSE BUTTON */
+#right-column :nth-child(3) { /* CLOSE BUTTON */
   margin-top: auto;
 }
 
