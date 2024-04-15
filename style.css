@@ -21,7 +21,7 @@
 
   --container-colour: #d4a9b2; 
   --container-background: #cbecfe;
-  --container-accent: #DF697C;
+  --container-accent: #df697c;
 
   --border-light: #fbf7f7;
   --border-dark: #B08D94;
@@ -210,7 +210,7 @@ header {
 
   background-color: var(--container-accent);
 
-  color: var(--element-accent-light); 
+  color: black;  /* var(--element-accent-light) */
 
   padding: 0.2em;
   
@@ -497,7 +497,6 @@ header {
 #about-header-text,
 #window-header-text {
   height: 1em;
-  width: 1em;
   white-space: nowrap;
 }
 
@@ -920,7 +919,7 @@ header {
 
   #overlay-text {
     display: block;
-    color: var(--element-accent-light);
+    color: black; /* var(--element-accent-light) */
     margin: 2em;
     text-align: center;
   }
